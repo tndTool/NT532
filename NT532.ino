@@ -32,8 +32,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 void SSD_1306(){
     if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
     }
-        delay(2000);
-        display.clearDisplay();
+      delay(2000);
+      display.clearDisplay();
     }
 
 void temp_humi(){
@@ -43,13 +43,13 @@ void temp_humi(){
     Serial.print(String(t)+" "+String(h)+" "+String(lux));
     if ( lux > 70 )
     {
-        digitalWrite(LED_G, HIGH);
-        digitalWrite(LED_R, LOW);
+      digitalWrite(LED_G, HIGH);
+      digitalWrite(LED_R, LOW);
     }
     else
     {
-        digitalWrite(LED_G, LOW);
-        digitalWrite(LED_R, HIGH);
+      digitalWrite(LED_G, LOW);
+      digitalWrite(LED_R, HIGH);
     }
 
     display.setTextSize(1);
